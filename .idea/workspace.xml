@@ -69,6 +69,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.kafka.command.action" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\avnis\Downloads\sts workspace\Kafka-Microservice-Concepts" />
       <recent name="C:\Users\avnis\Downloads\sts workspace\Kafka-Microservice-Concepts\Kafka-MS-Order\src\main\resources" />
@@ -77,7 +80,7 @@
       <recent name="C:\Users\avnis\Downloads\sts workspace\Kafka-Microservice-Concepts\Kafka-MS-Order\src\main\java\com\kafka" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PatternMsApplication">
+  <component name="RunManager" selected="Application.StorageMsApplication">
     <configuration name="OrderMsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kafka.OrderMsApplication" />
       <module name="Kafka-MS-Order" />
@@ -104,10 +107,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StorageMsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kafka.StorageMsApplication" />
+      <module name="Kafka-MS-Storage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kafka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PatternMsApplication" />
+        <item itemvalue="Application.StorageMsApplication" />
         <item itemvalue="Application.OrderMsApplication" />
+        <item itemvalue="Application.PatternMsApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -140,6 +157,16 @@
           <url>file://$PROJECT_DIR$/Kafka-MS-Order/src/main/java/com/kafka/api/server/OrderApi.java</url>
           <line>23</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Kafka-MS-Order/src/main/java/com/kafka/api/server/PromotionApi.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Kafka-MS-Order/src/main/java/com/kafka/api/server/DiscountApi.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

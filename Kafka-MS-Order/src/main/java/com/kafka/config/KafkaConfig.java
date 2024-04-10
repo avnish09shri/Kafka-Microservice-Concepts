@@ -17,4 +17,9 @@ public class KafkaConfig {
     public NewTopic topicOrderReply(){
         return TopicBuilder.name("t-commodity-order-reply").partitions(1).replicas(1).build();
     }
+
+    @Bean
+    public NewTopic topicPromotion(){
+        return TopicBuilder.name("t-commodity-promotion").partitions(1).replicas(1).build();
+    }
 }
