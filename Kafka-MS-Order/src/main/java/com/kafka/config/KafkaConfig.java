@@ -13,6 +13,7 @@ public class KafkaConfig {
         return TopicBuilder.name("t-commodity-order").partitions(2).replicas(1).build();
     }
 
+    @Bean
     public NewTopic topicOrderReply(){
         return TopicBuilder.name("t-commodity-order-reply").partitions(1).replicas(1).build();
     }
