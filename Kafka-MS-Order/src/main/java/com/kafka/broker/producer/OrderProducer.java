@@ -24,9 +24,9 @@ public class OrderProducer {
     private KafkaTemplate<String, OrderMessage> kafkaTemplate;
 
     public void publish(OrderMessage orderMessage){
-        //var producerRecord = buildProducerRecord(orderMessage);
+        var producerRecord = buildProducerRecord(orderMessage);
 
-        kafkaTemplate.send("t-commodity-order", orderMessage.getOrderLocation(), orderMessage)
+        kafkaTemplate.send(producerRecord)
                 .addCallback(new ListenableFutureCallback<SendResult<String, OrderMessage>>() {
                     @Override
                     public void onFailure(Throwable ex) {
@@ -43,7 +43,7 @@ public class OrderProducer {
         log.info("Just a dummy message for order {}, item {}", orderMessage.getOrderNumber(), orderMessage.getItemName());
     }
 
-    /*private ProducerRecord<String, OrderMessage> buildProducerRecord(OrderMessage orderMessage) {
+    private ProducerRecord<String, OrderMessage> buildProducerRecord(OrderMessage orderMessage) {
         var surpriseBonus = StringUtils.startsWithIgnoreCase(orderMessage.getOrderLocation(), "A") ? 25 : 15;
         var headers = new ArrayList<Header>();
         var surpriseBonusHeader = new RecordHeader("surpriseBonus", Integer.toString(surpriseBonus).getBytes());
@@ -52,5 +52,5 @@ public class OrderProducer {
 
         return new ProducerRecord<String, OrderMessage>("t-commodity-order",
                 null, orderMessage.getOrderNumber(), orderMessage, headers);
-    }*/
+    }
 }
